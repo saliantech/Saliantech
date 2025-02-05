@@ -32,7 +32,7 @@ async function fetchSettings() {
                                     <div class="text-container">
                                         <h3 class="w3-text-dark-gray typing"><strong>${title}</strong></h3>
                                         <p>${value}</p></div>
-                                        <button class="w3-button w3-blue w3-round-large" onclick="ticketdiv('${title}')">BOOK NOW</button>
+                                        <button style="display:none" id="downld" class="w3-button w3-blue w3-round-large" onclick="ticketdiv('${title}')">BOOK NOW</button>
                                         <a href="${downloadUrl}" class="w3-button w3-green w3-round-large" download="image.jpg">DOWNLOAD</a>
                                 </div>
                             `;
@@ -48,7 +48,7 @@ async function fetchSettings() {
                             settingsList.appendChild(settingDiv);
                         }
                     });
-
+                    ckdnlgn();
                     applyScrollEffects();
                 }
             } catch (error) {
@@ -56,6 +56,13 @@ async function fetchSettings() {
             }
         }
 
+        function ckdnlgn(){
+          const email = localStorage.getItem("email"); 
+          if(email){
+            downld.style.display = "block";
+            return;
+          }
+        }
         function applyScrollEffects() {
             gsap.utils.toArray(".setting").forEach((card) => {
                 let textContainer = card.querySelector('.text-container');
