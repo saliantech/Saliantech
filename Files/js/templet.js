@@ -22,7 +22,8 @@ async function fetchSettings() {
                             const fileId = fileIdMatch[1];
                             const imgSrc = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
                             const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-
+                            const email = localStorage.getItem("email");
+                            const displayStyle = email ? "flex" : "none";
                             const settingDiv = document.createElement("div");
                             settingDiv.className = "setting w3-third w3-padding";
                             
@@ -32,9 +33,10 @@ async function fetchSettings() {
                                     <div class="text-container">
                                         <h3 class="w3-text-dark-gray typing"><strong>${title}</strong></h3>
                                         <p>${value}</p></div>
-                                        <button style="display:none" id="downld" class="w3-button w3-blue w3-round-large" onclick="ticketdiv('${title}')">BOOK NOW</button>
-                                        <a href="${downloadUrl}" class="w3-button w3-green w3-round-large" download="image.jpg">DOWNLOAD</a>
-                                </div>
+                                        <div style="flex">
+                                        <button id="downld" class="w3-button w3-blue w3-round-large" style="display: ${displayStyle};margin:5px;" onclick="ticketdiv('${title}')">BOOK NOW</button>
+                                        <a href="${downloadUrl}" style="margin:5px;" class="w3-button w3-green w3-round-large" download="image.jpg">DOWNLOAD</a>
+                                </div></div>
                             `;
 
                             // Load image dynamically
@@ -47,9 +49,8 @@ async function fetchSettings() {
 
                             settingsList.appendChild(settingDiv);
                         }
-                        ckdnlgn();
                     });
-                    
+                   
                     applyScrollEffects();
                 }
             } catch (error) {
@@ -57,13 +58,6 @@ async function fetchSettings() {
             }
         }
 
-        function ckdnlgn(){
-          const email = localStorage.getItem("email"); 
-          if(email){
-            downld.style.display = "block";
-            return;
-          }
-        }
         function applyScrollEffects() {
             gsap.utils.toArray(".setting").forEach((card) => {
                 let textContainer = card.querySelector('.text-container');

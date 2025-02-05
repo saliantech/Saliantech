@@ -1,5 +1,7 @@
 const modal = document.getElementById("popupForm");
   const openPopup = document.getElementById("profilefalse");
+  const okbtn = document.getElementById("okbtn");
+  const chatlogin = document.getElementById("chatlogin");
   const closeBtn = document.querySelector(".close");
   const toggleLinks = document.querySelectorAll(".toggleForm");
   const forms = document.querySelectorAll(".form");
@@ -10,6 +12,15 @@ const modal = document.getElementById("popupForm");
     showForm("loginForm");
   });
 
+  okbtn.addEventListener("click", () => {
+    modal.style.display = "block";
+    showForm("loginForm");
+  });
+  chatlogin.addEventListener("click", () => {
+    closechating();
+    modal.style.display = "block";
+    showForm("loginForm");
+  });
   // Close the popup
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
