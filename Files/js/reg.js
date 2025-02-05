@@ -46,11 +46,7 @@ function showVerifyOTPForm() {
 
 const Login_URL = "https://script.google.com/macros/s/AKfycbwCqigws5tUSNuKm4IQ2VLiN-KWKWZDrDzDliQzOzxwMgb2BezGSDOww5tZrOtVq2Kt/exec";
 
-// Check if the user is already logged in by checking localStorage
-
-//-------
-//const userStatusUrl = "https://script.google.com/macros/s/AKfycbzFgpCMbyypB9oat7GW05uvncFiayTSzoXqcT3t6WrlKyz8Oe07ZpLO9fpHLcjdEQ9c/exec"; // Replace with your web app URL
-async function register() {
+/async function register() {
   showLoading();
 
   // Input validation
