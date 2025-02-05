@@ -32,6 +32,7 @@ const modal = document.getElementById("popupForm");
 
   function lgnshw(){
     closechating();
+    closePopupalert();
     modal.style.display = "block";
   }
 

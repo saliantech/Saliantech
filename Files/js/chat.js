@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div></div>
       <div class="incoming"><div style="visibility: hidden;" class="user-avatar"></div>
           <div onclick="lgnshw()" style="background-color:#007bff;" class="message">
-            <p><strong><a style="font-size: 20px; text-decoration: none; color:#fff;" href="login.html">Login</a></strong></p>
+            <p><strong><a style="font-size: 20px; text-decoration: none; color:#fff;">Login</a></strong></p>
       </div></div>
       `;
       return;
