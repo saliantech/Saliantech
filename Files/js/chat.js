@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p style="font-size: 20px; color:red;"><strong>NOTE:</strong> To Chat with admin Please click below to login</p>
       </div></div>
       <div class="incoming"><div style="visibility: hidden;" class="user-avatar"></div>
-          <div id="chatlogin" style="background-color:#007bff;" class="message">
+          <div onclick="lgnshw()" style="background-color:#007bff;" class="message">
             <p><strong><a style="font-size: 20px; text-decoration: none; color:#fff;" href="login.html">Login</a></strong></p>
       </div></div>
       `;

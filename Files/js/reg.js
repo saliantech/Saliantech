@@ -30,6 +30,10 @@ const modal = document.getElementById("popupForm");
     });
   });
 
+  function lgnshw(){
+    closechating();
+    modal.style.display = "block";
+  }
 
 // Show Verify OTP Form
 function showVerifyOTPForm() {
