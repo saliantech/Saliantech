@@ -47,8 +47,9 @@ async function fetchSettings() {
 
                             settingsList.appendChild(settingDiv);
                         }
+                        ckdnlgn();
                     });
-                    ckdnlgn();
+                    
                     applyScrollEffects();
                 }
             } catch (error) {
