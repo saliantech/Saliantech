@@ -33,7 +33,7 @@ async function fetchSettings() {
                                     <div class="text-container">
                                         <h3 class="w3-text-dark-gray typing"><strong>${title}</strong></h3>
                                         <p>${value}</p></div>
-                                        <div style="flex">
+                                        <div style="display:flex">
                                         <button id="downld" class="w3-button w3-blue w3-round-large" style="display: ${displayStyle};margin:5px;" onclick="ticketdiv('${title}')">BOOK NOW</button>
                                         <a href="${downloadUrl}" style="margin:5px;" class="w3-button w3-green w3-round-large" download="image.jpg">DOWNLOAD</a>
                                 </div></div>
