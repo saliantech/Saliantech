@@ -28,7 +28,7 @@ async function fetchSettings() {
                             
                             settingDiv.innerHTML = `
                                 <div class="content-item w3-border w3-round" style="margin:5px; max-width:100%;">
-                                    <img class="dynamicImg" src="waiting.gif" alt="Loading Image..." style="width: 100%;">
+                                    <img class="dynamicImg" src="https://saliantech.github.io/Saliantech/Files/resources/waiting.gif" alt="Loading Image..." style="width: 100%;">
                                     <div class="text-container">
                                         <h3 class="w3-text-dark-gray typing"><strong>${title}</strong></h3>
                                         <p>${value}</p></div>
